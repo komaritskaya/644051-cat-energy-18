@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Надежда Комарицкая](https://up.htmlacademy.ru/adaptive/18/user/644051).
-* Наставник: `Неизвестно`.
+- Студент: [Надежда Комарицкая](https://up.htmlacademy.ru/adaptive/18/user/644051).
+- Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
