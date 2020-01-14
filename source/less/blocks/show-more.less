@@ -1,0 +1,36 @@
+.show-more {
+  border-bottom: 1px solid @border-color;
+  padding: 25px 0;
+}
+
+.show-more__title {
+  font-family: @titles-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @text-titles-color;
+  padding: 11px 0;
+}
+
+.show-more__subtitle {
+  font-family: @text-font;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @text-main-color;
+  margin-bottom: 22px;
+}
+
+.show-more__inner {
+  .wrapper();
+}
+
+.show-more__btn {
+  .wrapper();
+
+  & > .btn {
+    display: block;
+    padding: 12px;
+  }
+}
