@@ -1,0 +1,33 @@
+.features__wrapper {
+  .wrapper();
+
+  padding-bottom: 22px;
+}
+
+.features__title {
+  font-family: @titles-font;
+  font-size: 36px;
+  line-height: 60px;
+  color: @text-titles-color;
+  padding-bottom: 20px;
+}
+
+.features__item {
+  font-size: 14px;
+  line-height: 18px;
+  color: @text-main-color;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-right: 20px;
+    background-color: @content-main-color;
+  }
+}
