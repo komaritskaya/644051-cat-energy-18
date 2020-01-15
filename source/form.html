@@ -37,38 +37,38 @@
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
           <form action="https://echo.htmlacademy.ru" class="order__form form">
-            <fieldset class="form__general">
-              <div class="form__general-wrapper">
-                <div class="form__main-info">
-                  <label for="name">
-                    <span>Имя:<sup>*</sup>
-                    </span>
-                    <input type="text" name="name" id="name" placeholder="Барсик" required/>
-                  </label>
-                  <label for="weight">
-                    <span>Вес (кг):<sup>*</sup>
-                    </span>
-                    <input type="text" name="weight" id="weight" placeholder="7" required/>
-                  </label>
-                  <label for="age">
-                    <span>Возраст (лет):</span>
-                    <input type="text" name="age" id="age" placeholder="7"/>
-                  </label>
-                </div>
-                <div class="form__goal">
-                  <label for="loss">
-                    <input type="radio" name="goal" id="loss"/>
-                    <span>похудение</span>
-                  </label>
-                  <label for="gain">
-                    <input type="radio" name="goal" id="gain"/>
-                    <span>набор массы</span>
-                  </label>
-                  <label for="unknown">
-                    <input type="radio" name="goal" id="unknown"/>
-                    <span>не знаю (нужен ваш совет)</span>
-                  </label>
-                </div>
+            <fieldset class="form__main">
+              <div class="form__main-wrapper">
+                <label for="name">
+                  <span>Имя:<sup>*</sup>
+                  </span>
+                  <input type="text" name="name" id="name" placeholder="Барсик" required/>
+                </label>
+                <label for="weight">
+                  <span>Вес (кг):<sup>*</sup>
+                  </span>
+                  <input type="text" name="weight" id="weight" placeholder="7" required/>
+                </label>
+                <label for="age">
+                  <span>Возраст (лет):</span>
+                  <input type="text" name="age" id="age" placeholder="7"/>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__goal">
+              <div class="form__goal-wrapper">
+                <label for="loss">
+                  <input type="radio" name="goal" id="loss"/>
+                  <span>похудение</span>
+                </label>
+                <label for="gain">
+                  <input type="radio" name="goal" id="gain"/>
+                  <span>набор массы</span>
+                </label>
+                <label for="unknown">
+                  <input type="radio" name="goal" id="unknown"/>
+                  <span>не знаю (нужен ваш совет)</span>
+                </label>
               </div>
             </fieldset>
             <fieldset class="form__contacts">
@@ -122,11 +122,13 @@
               </div>
             </fieldset>
             <fieldset class="form__submit">
-              <input type="submit" class="form__submit-btn btn" value="Отправить заявку"/>
-              <small class="form__required">
-                <sup>*</sup>
-                — Обязательные поля
-              </small>
+              <div class="form__submit-wrapper">
+                <input type="submit" class="form__submit-btn btn" value="Отправить заявку"/>
+                <small class="form__required">
+                  <sup>*</sup>
+                  — Обязательные поля
+                </small>
+              </div>
             </fieldset>
           </form>
         </div>
