@@ -1,7 +1,19 @@
 .form {
   font-family: @titles-font;
 
+  & fieldset {
+    border: none;
+    padding: 0;
+
+    &:nth-child(2) {
+      border-top: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
+    }
+  }
+
   & legend {
+    .wrapper();
+
     font-size: 24px;
     line-height: 24px;
   }
@@ -10,11 +22,68 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+    color: @labels-color;
   }
+
+  & input,
+  & textarea {
+    padding: 15px 16px;
+    text-transform: uppercase;
+    color: @text-main-color;
+    border: 1px solid @border-color;
+  }
+
+  & .btn {
+    border: none;
+    color: @white-color;
+    display: block;
+    width: 100%;
+    margin-bottom: 23px;
+  }
+}
+
+.form__main-wrapper,
+.form__goal-wrapper,
+.form__contacts-wrapper,
+.form__comments-wrapper,
+.form__additional-wrapper,
+.form__submit-wrapper {
+  .wrapper();
+}
+
+.form__main-wrapper {
+  padding-top: 39px;
+  padding-bottom: 23px;
+}
+
+.form__goal-wrapper {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.form__contacts-wrapper {
+  padding-top: 65px;
+  padding-bottom: 42px;
+}
+
+.form__comments-wrapper {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.form__additional-wrapper {
+  padding-top: 42px;
+  padding-bottom: 34px;
+}
+
+.form__submit-wrapper {
+  padding-bottom: 34px;
+  text-align: center;
 }
 
 .form__required {
   font-family: @text-font;
   font-size: 14px;
   line-height: 16px;
+  color: @text-main-color;
 }
