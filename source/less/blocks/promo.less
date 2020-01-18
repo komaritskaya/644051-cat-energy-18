@@ -1,12 +1,22 @@
 .promo {
-  background-color: @content-main-color;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(to bottom, @bg-bright-color 63.5%, @white-color 63.5%);
 }
 
 .promo__wrapper {
   .wrapper();
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 480px;
+}
+
+.promo__image {
+  align-self: center;
 }
 
 .promo__title {
@@ -27,4 +37,101 @@
   text-transform: uppercase;
   color: @white-color;
   text-align: center;
+  margin-bottom: 29px;
+}
+
+.promo__lead {
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 12px;
+  padding-bottom: 9px;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background: inherit;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @text-titles-color;
+    padding-top: 37px;
+    padding-bottom: 33px;
+  }
+
+  .promo__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    color: @text-titles-color;
+    margin-bottom: 48px;
+  }
+
+  .promo__title,
+  .promo__subtitle {
+    max-width: 420px;
+    margin-left: 90px;
+    text-align: left;
+  }
+
+  .promo__lead {
+    font-size: 20px;
+    line-height: 20px;
+    display: inline-block;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    padding-right: 29px;
+    margin-left: 90px;
+  }
+
+  .promo__wrapper {
+    position: relative;
+    background: inherit;
+    min-height: 843px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .promo__image {
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+    height: 609px;
+    border: 2px dashed #ff0000;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    background: linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
+  }
+
+  .promo__wrapper {
+    min-height: 696px;
+    justify-content: center;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+  }
+
+  .promo__title,
+  .promo__subtitle {
+    margin-left: 83px;
+  }
+
+  .promo__image {
+    left: auto;
+    bottom: auto;
+    top: 142px;
+    right: 328px;
+    height: 499px;
+    width: 552px;
+    z-index: 1;
+  }
 }

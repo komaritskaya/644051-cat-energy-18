@@ -10,11 +10,15 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Кэт энерджи лого" class="page-header__logo-image" width="203" height="60"/>
+          <img src="img/logo-mobile.svg" alt="Кэт энерджи лого" class="page-header__logo-image" width="119" height="39"/>
         </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--reverse main-nav--closed main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__list-item main-nav__list-item--active">
             <a>Главная</a>
@@ -32,12 +36,12 @@
     <main class="page-main">
       <section class="promo">
         <div class="promo__wrapper">
-          <div class="promo__info">
-            <h1 class="promo__title">Функциональное питание для котов</h1>
-            <p class="promo__subtitle">Занялся собой? Займись котом</p>
-            <a href="form.html" class="promo__lead btn">Подобрать программу</a>
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__subtitle">Занялся собой? Займись котом</p>
+          <div class="promo__image">
+            <img src="img/index-can-mobile@1x.png" alt="Банка кэт энерджи" width="280" height="270"/>
           </div>
-          <img src="img/index-can-mobile@1x.png" alt="Банка кэт энерджи" class="promo__image" width="280" height="270"/>
+          <a href="form.html" class="promo__lead btn">Подобрать программу</a>
         </div>
       </section>
 
@@ -160,8 +164,26 @@
         </div>
         <div class="page-footer__copyright copyright">
           <a href="https://htmlacademy.ru/intensive/adaptive" class="btn btn--unstyled copyright__link">HTML Academy</a>
+          <div class="copyright__logo"></div>
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
