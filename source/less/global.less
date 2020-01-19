@@ -31,3 +31,17 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.br-tablet {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .br-mobile {
+    display: none;
+  }
+
+  .br-tablet {
+    display: inline;
+  }
+}

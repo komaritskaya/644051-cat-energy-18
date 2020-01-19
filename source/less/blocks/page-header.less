@@ -3,4 +3,47 @@
 
   padding-top: 11px;
   padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    .wrapper();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .page-header__wrapper {
+    .wrapper-reset();
+  }
+
+  .page-header__logo {
+    width: 175px;
+    height: 60px;
+    border: 2px dashed #ff0000;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 53px;
+    padding-bottom: 53px;
+    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    width: 203px;
+  }
 }
