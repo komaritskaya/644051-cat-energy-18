@@ -1,6 +1,10 @@
 .main-nav {
   border-bottom: @simple-border;
   color: @text-titles-color;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list-item {
@@ -30,16 +34,14 @@
   border: none;
 }
 
-@media (max-width: @mobile-width-only) {
-  .main-nav--closed {
-    display: none;
-  }
-}
-
 @media (min-width: @tablet-width) {
   .main-nav {
     border: none;
     width: 62.1%;
+
+    &--closed {
+      display: block;
+    }
   }
 
   .main-nav__list {
