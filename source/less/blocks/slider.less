@@ -1,0 +1,111 @@
+.slider__picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.slider__controllers {
+  font-family: @titles-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @text-titles-color;
+  padding-top: 35px;
+  padding-bottom: 39px;
+  margin-left: 44px;
+  margin-right: 40px;
+}
+
+.slider__range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__range-outer {
+  width: 100%;
+  margin: 0 18px;
+  height: 14px;
+  background-color: @white-color;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.slider__range-inner {
+  width: 50%;
+  height: 100%;
+  background-color: @content-main-color;
+  border-radius: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    background: linear-gradient(to right, @bg-light-color 50%, @bg-almost-light-color 50%);
+  }
+
+  .slider__inner-wrapper {
+    .wrapper();
+    margin-top: -169px;
+  }
+
+  .slider__picture {
+    height: 517px;
+    width: 636px;
+    border: 2px dashed #ff0000;
+    margin: 0 auto;
+  }
+
+  .slider__controllers {
+    font-size: 20px;
+    padding-top: 21px;
+    padding-bottom: 75px;
+    margin: 0 70px;
+  }
+
+  .slider__range span {
+    padding-bottom: 6px;
+    border-bottom: 1px dotted @border-color;
+    margin-bottom: -7px;
+  }
+
+  .slider__range-outer {
+    width: 100%;
+    margin: 0 21px;
+    height: 6px;
+    background-color: @bg-slightly-darker-color;
+    border-radius: 2.5px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider__range-inner {
+    width: 34px;
+    height: 34px;
+    border: 13px solid @white-color;
+    background-color: @content-main-color;
+    border-radius: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__inner-wrapper {
+    .wrapper-reset();
+    padding-bottom: 75px;
+    min-height: 462px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .slider__picture {
+    margin-top: -190px;
+  }
+
+  .slider__controllers {
+    padding-bottom: 0;
+  }
+}

@@ -5,13 +5,18 @@
   background-color: @content-main-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   margin-top: 39px;
   margin-bottom: 35px;
-  padding-top: 65px;
+  padding-top: 190px;
   padding-bottom: 43px;
   padding-left: 60px;
   padding-right: 60px;
+  min-height: 289px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner > p {
@@ -20,4 +25,36 @@
   font-size: 16px;
   line-height: 20px;
   color: @white-color;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    padding-top: 75px;
+    padding-bottom: 70px;
+    padding-right: 125px;
+    padding-left: 424px;
+    min-height: 200px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+  }
+
+  .banner > p {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    margin: 0;
+    width: 20%;
+    padding-top: 190px;
+    padding-bottom: 43px;
+    padding-left: 43px;
+    padding-right: 43px;
+    min-height: 289px;
+  }
+
+  .banner > p {
+    text-align: center;
+  }
 }
