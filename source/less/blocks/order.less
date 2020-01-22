@@ -1,3 +1,7 @@
+.order {
+  border-top: @simple-border;
+}
+
 .order__title {
   .wrapper();
 
@@ -17,4 +21,37 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @text-titles-color;
+}
+
+@media (min-width: @tablet-width) {
+  .order {
+    border: none;
+  }
+
+  .order__title {
+    font-size: 60px;
+    padding-top: 39px;
+    padding-bottom: 48px;
+  }
+
+  .order__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__title {
+    font-size: 60px;
+    padding-top: 194px;
+    padding-bottom: 53px;
+  }
+
+  .order__subtitle {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 69px;
+  }
 }

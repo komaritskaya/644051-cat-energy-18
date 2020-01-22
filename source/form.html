@@ -39,52 +39,72 @@
       <section class="order">
         <div class="order__wrapper">
           <h1 class="order__title">Подбор программы</h1>
-          <p class="order__subtitle">
-            Заполните анкету и мы подберем программу питания для вашего кота
-          </p>
           <form action="https://echo.htmlacademy.ru" class="order__form form">
-            <fieldset class="form__main">
+            <p class="order__subtitle">
+              Заполните анкету и мы подберем<br>программу питания для вашего кота
+            </p>
+            <fieldset id="form__main">
               <div class="form__main-wrapper">
-                <label for="name">
-                  <span>Имя:<sup>*</sup>
-                  </span>
-                  <input type="text" name="name" id="name" placeholder="Барсик" required/>
-                </label>
-                <label for="weight">
-                  <span>Вес (кг):<sup>*</sup>
-                  </span>
-                  <input type="text" name="weight" id="weight" placeholder="7" required/>
-                </label>
-                <label for="age">
-                  <span>Возраст (лет):</span>
-                  <input type="text" name="age" id="age" placeholder="7"/>
-                </label>
-              </div>
+                <div class="form__main-inner">
+                  <label for="name">
+                    <span>Имя:<sup>*</sup>
+                    </span>
+                    <input type="text" name="name" id="name" placeholder="Барсик" required/>
+                  </label>
+                  <label for="weight">
+                    <span>Вес (кг):<sup>*</sup>
+                    </span>
+                    <input type="text" name="weight" id="weight" placeholder="7" required/>
+                  </label>
+                  <label for="age">
+                    <span>Возраст (лет)</span>
+                    <input type="text" name="age" id="age" placeholder="7"/>
+                  </label>
+                </div>
+                <div class="form__goal">
+                  <div class="form__goal-wrapper">
+                    <label for="loss">
+                      <input
+                        type="radio"
+                        name="goal"
+                        id="loss"
+                        checked
+                      />
+                      <span class="form__goal-radio"></span>
+                      <span>похудение</span>
+                    </label>
+                    <label for="gain">
+                      <input
+                        type="radio"
+                        name="goal"
+                        id="gain"
+                      />
+                      <span class="form__goal-radio"></span>
+                      <span>набор массы</span>
+                    </label>
+                    <label for="unknown">
+                      <input
+                        type="radio"
+                        name="goal"
+                        id="unknown"
+                      />
+                      <span class="form__goal-radio"></span>
+                      <span>не знаю (нужен ваш совет)</span>
+                    </label>
+                  </div>
+                </div>
+                </div>
             </fieldset>
-            <fieldset class="form__goal">
-              <div class="form__goal-wrapper">
-                <label for="loss">
-                  <input type="radio" name="goal" id="loss"/>
-                  <span>похудение</span>
-                </label>
-                <label for="gain">
-                  <input type="radio" name="goal" id="gain"/>
-                  <span>набор массы</span>
-                </label>
-                <label for="unknown">
-                  <input type="radio" name="goal" id="unknown"/>
-                  <span>не знаю (нужен ваш совет)</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="form__contacts">
-              <legend>
-                Контактные данные (владельца кота)
+            <fieldset id="form__contacts">
+              <legend class="form__contacts-title">
+                <span>
+                  Контактные данные <br class="br-mobile">(владельца кота)
+                </span>
               </legend>
               <div class="form__contacts-wrapper">
                 <div class="form__contacts-inner">
                   <label for="email">
-                    <span>E-mail:<sup>*</sup>
+                    <span>E&#8209;mail:<sup>*</sup>
                     </span>
                     <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required/>
                   </label>
@@ -96,38 +116,62 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="form__comments">
-              <legend>Комментарий</legend>
+            <fieldset id="form__comments">
+              <legend class="form__comments-title">
+                <span>Комментарий</span>
+              </legend>
               <div class="form__comments-wrapper">
-                <textarea rows="3">Расскажите обо всех повадках кота</textarea>
+                <div class="form__comments-inner">
+                  <textarea rows="3">Расскажите обо всех повадках кота</textarea>
+                </div>
               </div>
             </fieldset>
-            <fieldset class="form__additional">
-              <legend>
-                Дополнительно
+            <fieldset id="form__additional">
+              <legend class="form__additional-title">
+                <span>Дополнительно</span>
               </legend>
               <div class="form__additional-wrapper">
                 <div class="form__additional-inner">
                   <label for="sweetener">
-                    <input type="checkbox" name="sweetener" id="sweetener"/>
+                    <input
+                      type="checkbox"
+                      name="sweetener"
+                      id="sweetener"
+                    />
+                    <span class="form__additional-checkbox"></span>
                     <span>сахарозаменитель</span>
                   </label>
                   <label for="water">
-                    <input type="checkbox" name="water" id="water"/>
+                    <input
+                      type="checkbox"
+                      name="water"
+                      id="water"
+                    />
+                    <span class="form__additional-checkbox"></span>
                     <span>питьевая вода</span>
                   </label>
                   <label for="milk">
-                    <input type="checkbox" name="milk" id="milk"/>
+                    <input
+                      type="checkbox"
+                      name="milk"
+                      id="milk"
+                    />
+                    <span class="form__additional-checkbox"></span>
                     <span>молоко</span>
                   </label>
                   <label for="vitamins">
-                    <input type="checkbox" name="vitamins" id="vitamins"/>
+                    <input
+                      type="checkbox"
+                      name="vitamins"
+                      id="vitamins"
+                    />
+                    <span class="form__additional-checkbox"></span>
                     <span>витамины</span>
                   </label>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="form__submit">
+            <fieldset id="form__submit">
               <div class="form__submit-wrapper">
                 <input type="submit" class="form__submit-btn btn" value="Отправить заявку"/>
                 <small class="form__required">
@@ -143,16 +187,18 @@
       <section class="contacts contacts--light">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
-          <p class="contacts__invitation">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <p class="contacts__address">
-            <span>ул. Большая Конюшенная, д. 19/8</span>
-            <span>Санкт-Петербург</span>
-          </p>
+          <div class="contacts__info">
+            <p class="contacts__invitation">
+              Приглашаем<br>к сотрудничеству<br>дилеров!
+            </p>
+            <p class="contacts__address">
+              <span>ул. Большая<br>Конюшенная, д. 19/8</span>
+              <span>Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1574809611023!5m2!1sen!2sru" height="450" style="border:0;width:100%" allowfullscreen=""></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1574809611023!5m2!1sen!2sru" style="border:0;width:100%;height:100%;" allowfullscreen=""></iframe>
         </div>
       </section>
     </main>
