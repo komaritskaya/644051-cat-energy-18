@@ -11,8 +11,8 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @text-titles-color;
-  padding-top: 35px;
-  padding-bottom: 39px;
+  padding-top: 31px;
+  padding-bottom: 35px;
   margin-left: 44px;
   margin-right: 40px;
 }
@@ -92,6 +92,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .slider {
+    background: linear-gradient(to right, @bg-light-color 56%, @bg-almost-light-color 56%);
+  }
+
   .slider__inner-wrapper {
     .wrapper-reset();
     padding-bottom: 75px;
@@ -106,6 +110,8 @@
   }
 
   .slider__controllers {
+    padding-left: 10px;
     padding-bottom: 0;
+    margin-right: 0;
   }
 }

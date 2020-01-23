@@ -1,8 +1,12 @@
+.page-header {
+  border-bottom: @simple-border;
+}
+
 .page-header__wrapper {
   .wrapper();
 
   padding-top: 11px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,6 +15,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    border-bottom: 0;
+
     .wrapper();
     display: flex;
     flex-direction: row;
