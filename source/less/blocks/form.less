@@ -49,13 +49,13 @@
 }
 
 .form .btn {
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   color: @white-color;
   display: block;
   width: 100%;
   margin-bottom: 18px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 }
 
 .form__main-inner,
@@ -83,17 +83,33 @@
   }
 }
 
-.form__main-inner input,
-.form__contacts-inner input {
+.form__main-input,
+.form__contacts-input {
   width: 100%;
 }
 
-.form__main-inner input {
-  margin-left: 16px;
+.form__main-input {
+  &--name {
+    margin-left: 14px;
+  }
+
+  &--weight {
+    margin-left: 17px;
+  }
+
+  &--age {
+    margin-left: 17px;
+  }
 }
 
-.form__contacts-inner input {
-  margin-left: 10px;
+.form__contacts-input {
+  &--email {
+    margin-left: 11px;
+  }
+
+  &--phone {
+    margin-left: 9px;
+  }
 }
 
 .form__main-inner span,
@@ -279,9 +295,28 @@
     height: 174px;
   }
 
-  .form__main-inner input,
-  .form__contacts-inner input {
-    margin-left: 19px;
+  .form__main-input {
+    &--name {
+      margin-left: 16px;
+    }
+
+    &--weight {
+      margin-left: 20px;
+    }
+
+    &--age {
+      margin-left: 22px;
+    }
+  }
+
+  .form__contacts-input {
+    &--email {
+      margin-left: 19px;
+    }
+
+    &--phone {
+      margin-left: 15px;
+    }
   }
 
   .form__main-inner > label,
@@ -365,6 +400,8 @@
   .form .btn {
     width: 44.8%;
     margin-bottom: 0;
+    font-size: 20px;
+    padding-bottom: 14px;
   }
 
   .form__required {
@@ -398,8 +435,8 @@
 
   .form__goal-wrapper {
     margin: 0;
-    padding: 17px 28px;
-    min-height: 193px;
+    padding: 24px 27px;
+    min-height: 196px;
     height: 100%;
   }
 
@@ -410,6 +447,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 3px;
+  }
+
+  .form legend {
+    padding-top: 66px;
+    padding-bottom: 76px;
   }
 
   .form__contacts-inner,
@@ -432,6 +475,16 @@
     }
   }
 
+  .form__contacts-input {
+    &--email {
+      margin-left: 20px;
+    }
+
+    &--phone {
+      margin-left: 15px;
+    }
+  }
+
   .form__additional-inner > label {
     width: 20%;
   }
@@ -446,5 +499,16 @@
   .form .btn,
   .form__required {
     width: 46.7%;
+  }
+
+  .form .btn {
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+
+  .form fieldset:nth-child(3)::before,
+  .form fieldset:nth-child(4)::before,
+  .form fieldset:nth-child(5)::before {
+    top: 89px;
   }
 }
