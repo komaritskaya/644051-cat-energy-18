@@ -12,7 +12,7 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Кэт энерджи лого" class="page-header__logo-image" width="119" height="39"/>
+          <img src="img/logo-mobile.svg" alt="Кэт энерджи лого" class="page-header__logo-image" width="191" height="39"/>
         </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">
@@ -47,12 +47,12 @@
               <div class="form__main-wrapper">
                 <div class="form__main-inner">
                   <label for="name">
-                    <span>Имя:<sup>*</sup>
+                    <span>Имя:*
                     </span>
                     <input type="text" name="name" id="name" placeholder="Барсик" required/>
                   </label>
                   <label for="weight">
-                    <span>Вес (кг):<sup>*</sup>
+                    <span>Вес (кг):*
                     </span>
                     <input type="text" name="weight" id="weight" placeholder="7" required/>
                   </label>
@@ -68,6 +68,7 @@
                         type="radio"
                         name="goal"
                         id="loss"
+                        class="visually-hidden"
                         checked
                       />
                       <span class="form__goal-radio"></span>
@@ -78,6 +79,7 @@
                         type="radio"
                         name="goal"
                         id="gain"
+                        class="visually-hidden"
                       />
                       <span class="form__goal-radio"></span>
                       <span>набор массы</span>
@@ -87,6 +89,7 @@
                         type="radio"
                         name="goal"
                         id="unknown"
+                        class="visually-hidden"
                       />
                       <span class="form__goal-radio"></span>
                       <span>не знаю (нужен ваш совет)</span>
@@ -104,12 +107,12 @@
               <div class="form__contacts-wrapper">
                 <div class="form__contacts-inner">
                   <label for="email">
-                    <span>E&#8209;mail:<sup>*</sup>
+                    <span>E&#8209;mail:*
                     </span>
                     <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required/>
                   </label>
                   <label for="phone">
-                    <span>Телефон:<sup>*</sup>
+                    <span>Телефон:*
                     </span>
                     <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required/>
                   </label>
@@ -137,6 +140,7 @@
                       type="checkbox"
                       name="sweetener"
                       id="sweetener"
+                      class="visually-hidden"
                     />
                     <span class="form__additional-checkbox"></span>
                     <span>сахарозаменитель</span>
@@ -146,6 +150,7 @@
                       type="checkbox"
                       name="water"
                       id="water"
+                      class="visually-hidden"
                     />
                     <span class="form__additional-checkbox"></span>
                     <span>питьевая вода</span>
@@ -155,6 +160,7 @@
                       type="checkbox"
                       name="milk"
                       id="milk"
+                      class="visually-hidden"
                     />
                     <span class="form__additional-checkbox"></span>
                     <span>молоко</span>
@@ -164,6 +170,7 @@
                       type="checkbox"
                       name="vitamins"
                       id="vitamins"
+                      class="visually-hidden"
                     />
                     <span class="form__additional-checkbox"></span>
                     <span>витамины</span>
@@ -175,8 +182,7 @@
               <div class="form__submit-wrapper">
                 <input type="submit" class="form__submit-btn btn" value="Отправить заявку"/>
                 <small class="form__required">
-                  <sup>*</sup>
-                  — Обязательные поля
+                  * — Обязательные поля
                 </small>
               </div>
             </fieldset>
