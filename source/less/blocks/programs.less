@@ -13,7 +13,10 @@
 
 .programs__item {
   background-color: @bg-light-color;
-  padding: 22px 18px;
+  padding-top: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 19px;
   margin-bottom: 20px;
 }
 
@@ -21,6 +24,7 @@
   font-family: @titles-font;
   font-size: 24px;
   line-height: 37px;
+  padding-left: 73px;
   text-transform: uppercase;
   color: @text-titles-color;
 }
@@ -29,9 +33,11 @@
   font-size: 14px;
   line-height: 18px;
   color: @text-main-color;
-  padding: 25px 0;
+  padding-top: 29px;
+  padding-left: 2px;
+  padding-bottom: 22px;
   border-bottom: @simple-border;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .programs__item-link {
@@ -40,6 +46,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @text-titles-color;
+  padding-left: 1px;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,18 +56,27 @@
 
   .programs__item {
     margin-bottom: 30px;
-    padding-top: 81px;
-    padding-bottom: 62px;
+    padding-top: 75px;
+    padding-bottom: 61px;
     padding-left: 52px;
-    padding-right: 285px;
+    padding-right: 289px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &:first-child {
+      padding-right: 283px;
+    }
+
+    &:last-child {
+      padding-right: 312px;
+    }
   }
 
   .programs__item-title {
     font-size: 36px;
     line-height: 37px;
+    padding-left: 0;
   }
 
   .programs__item-text {
@@ -68,6 +84,8 @@
     line-height: 24px;
     margin-bottom: 35px;
     border-bottom: none;
+    padding-top: 25px;
+    padding-left: 0;
     flex: 1;
   }
 
@@ -90,5 +108,24 @@
 
   .programs__item {
     width: 46.7%;
+    padding-top: 76px;
+
+    &:first-child {
+      padding-right: 52px;
+    }
+
+
+    &:last-child {
+      padding-right: 52px;
+    }
+  }
+
+  .programs__item-title {
+    padding-left: 162px;
+  }
+
+  .programs__item-text {
+    padding-top: 74px;
+    margin-bottom: 9px;
   }
 }

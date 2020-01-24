@@ -7,9 +7,9 @@
 .features__title {
   font-family: @titles-font;
   font-size: 36px;
-  line-height: 60px;
+  line-height: 54px;
   color: @text-titles-color;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .features__list {
@@ -23,6 +23,7 @@
   color: @text-main-color;
   margin-bottom: 20px;
   padding-left: 80px;
+  padding-top: 4px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -47,8 +48,8 @@
 @media (min-width: @tablet-width) {
   .features__title {
     font-size: 60px;
-    padding-top: 20px;
-    padding-bottom: 63px;
+    padding-top: 19px;
+    padding-bottom: 43px;
   }
 
   .features__list {
@@ -62,10 +63,12 @@
     line-height: 24px;
     flex-direction: column;
     padding-left: 0;
-    padding-top: 117px;
+    padding-right: 60px;
+    padding-top: 111px;
     width: 45.7%;
     min-height: 230px;
-    margin-bottom: 89px;
+    margin-bottom: 55px;
+    margin-top: 32px;
 
     &::before {
       width: 80px;
@@ -82,34 +85,43 @@
       line-height: 281px;
       color: @bg-light-color;
       top: -39px;
-      right: 0;
+      text-align-last: left;
       z-index: -1;
     }
 
     &:first-child::after {
       content: "1";
+      left: 120px;
     }
 
     &:nth-child(2)::after {
       content: "2";
+      left: 112px;
     }
 
     &:nth-child(3)::after {
       content: "3";
+      left: 113px;
     }
 
     &:nth-child(4)::after {
       content: "4";
+      left: 113px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
-    padding-bottom: 128px;
+    padding-bottom: 160px;
+  }
+
+  .features__title {
+    padding-top: 47px;
   }
 
   .features__item {
-    width: 20%;
+    width: 20.1%;
+    padding-right: 0;
   }
 }

@@ -27,7 +27,8 @@
   font-family: @titles-font;
   font-size: 24px;
   line-height: 24px;
-  padding: 30px 0;
+  padding-top: 28px;
+  padding-bottom: 34px;
   padding-right: 24px;
   display: inline-block;
   background-color: @white-color;
@@ -35,6 +36,7 @@
 
 .additional-items__item {
   border-bottom: @simple-border;
+  min-height: 128px;
 
   &:first-child {
     border-top: @simple-border;
@@ -46,22 +48,28 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 13px 0;
 }
 
 .additional-items__item-details {
   font-family: @text-font;
   font-size: 14px;
   line-height: 14px;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: space-between;
 }
 
 .additional-items__btn {
   display: block;
   font-size: 16px;
   line-height: 20px;
-  padding: 12px;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-bottom: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -73,8 +81,8 @@
   .additional-items__title {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 71px;
-    padding-bottom: 75px;
+    padding-top: 68px;
+    padding-bottom: 80px;
     padding-left: 37px;
     padding-right: 37px;
   }
@@ -82,15 +90,18 @@
   .additional-items__item {
     border-left: @simple-border;
     border-right: @simple-border;
-    padding: 0 40px;
+    padding-left: 38px;
+    padding-right: 37px;
+    min-height: 139px;
   }
 
   .additional-items__item-description {
-    padding: 27px 0;
+    padding-top: 25px;
+    padding-bottom: 22px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 
   .additional-items__item-title {
@@ -118,7 +129,8 @@
 
   .additional-items__btn {
     margin-top: 0;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
+    padding-left: 11px;
   }
 }
 
@@ -132,7 +144,9 @@
   }
 
   .additional-items__title {
-    padding-top: 79px;
+    padding-top: 75px;
+    margin-left: -37px;
+    padding-bottom: 81px;
   }
 
   .additional-items__inner-wrapper {
@@ -153,17 +167,38 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 71px;
   }
 
   .additional-items__item-description {
     flex-grow: 1;
     padding: 0;
+    padding-top: 3px;
+  }
+
+  .additional-items__item-details {
+    width: 46.9%;
+
+    justify-content: space-between;
+  }
+
+  .additional-items__item-details span {
+    text-align: left;
+
+    &:last-child {
+      width: 100%;
+      max-width: 45px;
+    }
   }
 
   .additional-items__btn {
     flex-basis: 245px;
-    margin-left: 39px;
+    margin-left: 36px;
     margin-bottom: 0;
+    padding-left: 13px;
   }
 }
