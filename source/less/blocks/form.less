@@ -24,14 +24,6 @@
   color: @labels-color;
 }
 
-.form input {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 12px;
-  padding-bottom: 13px;
-  height: 45px;
-}
-
 .form textarea {
   resize: none;
   padding-top: 13px;
@@ -42,23 +34,14 @@
   line-height: 18px;
 }
 
-.form input,
+.form__main-input,
+.form__contacts-input,
 .form textarea {
   text-transform: uppercase;
   font-family: inherit;
   font-size: inherit;
   color: @text-main-color;
   border: @simple-border;
-}
-
-.form .btn {
-  font-size: 16px;
-  border: none;
-  color: @white-color;
-  display: block;
-  width: 100%;
-  margin-bottom: 18px;
-  padding-bottom: 11px;
 }
 
 .form__main-inner,
@@ -89,6 +72,11 @@
 .form__main-input,
 .form__contacts-input {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  height: 45px;
 }
 
 .form__main-input {
@@ -218,9 +206,20 @@
 }
 
 .form__submit-wrapper {
-  padding-top: 34px;
+  padding-top: 33px;
   padding-bottom: 31px;
   text-align: center;
+}
+
+.form__submit-btn {
+  font-size: 16px;
+  border: none;
+  color: @white-color;
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding-top: 13px;
+  padding-bottom: 11px;
 }
 
 .form__required {
@@ -401,7 +400,7 @@
     align-items: center;
   }
 
-  .form .btn {
+  .form__submit-btn {
     width: 44.8%;
     margin-bottom: 0;
     font-size: 20px;
@@ -497,15 +496,15 @@
     padding-left: 110px;
     padding-right: 110px;
     padding-top: 29px;
-    padding-bottom: 82px;
+    padding-bottom: 85px;
   }
 
-  .form .btn,
+  .form__submit-btn,
   .form__required {
     width: 46.7%;
   }
 
-  .form .btn {
+  .form__submit-btn {
     padding-top: 15px;
     padding-left: 20px;
   }
