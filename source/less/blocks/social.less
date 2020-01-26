@@ -1,7 +1,27 @@
 .social__list {
-  flex-basis: 125px;
+  width: 125px;
+  height: 19px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .social__image {
+    &--vk {
+      width: 36px;
+      height: 16px;
+    }
+
+    &--ig {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }

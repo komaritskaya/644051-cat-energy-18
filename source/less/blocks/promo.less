@@ -6,13 +6,17 @@
   .wrapper();
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto 305px;
   background-position: top;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   min-height: 480px;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .promo__image {
@@ -47,11 +51,12 @@
   padding-top: 10px;
   padding-bottom: 11px;
   display: block;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    background: inherit;
+    background: none;
   }
 
   .promo__title {
@@ -85,11 +90,12 @@
     padding-left: 25px;
     padding-right: 29px;
     margin-left: 89px;
+    width: auto;
   }
 
   .promo__wrapper {
     position: relative;
-    background: inherit;
+    background: none;
     min-height: 843px;
     justify-content: flex-start;
     align-items: flex-start;
@@ -101,24 +107,36 @@
     left: 30px;
     right: 30px;
     bottom: 0;
+    width: 709px;
     height: 609px;
-    border: 2px dashed #ff0000;
     z-index: -1;
+  }
+
+  .promo__image img {
+    width: 709px;
+    height: 609px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    background: linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
+    background-image:
+      url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50vw top, center;
+    background-size: auto 696px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
+    }
   }
 
   .promo__wrapper {
     min-height: 696px;
     justify-content: center;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: right;
   }
 
   .promo__title,
@@ -135,13 +153,13 @@
   }
 
   .promo__image {
-    left: auto;
+    left: 490px;
     bottom: auto;
     top: 142px;
-    right: 328px;
-    height: 499px;
+    right: auto;
+    z-index: 0;
     width: 552px;
-    z-index: 1;
+    height: 499px;
   }
 
   .promo__lead {
