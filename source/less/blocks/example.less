@@ -76,6 +76,10 @@
   text-align: center;
 }
 
+.example__image--after {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .example {
     background-color: @white-color;
@@ -143,7 +147,7 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    background: linear-gradient(to right, @bg-light-color 70%, @bg-almost-light-color 70%);
+    background: linear-gradient(to right, @bg-light-color 50%, @bg-almost-light-color 50%);
     border: none;
   }
 
@@ -211,6 +215,6 @@
   }
 
   .example__slider {
-    flex-grow: 1;
+    width: 53.3%;
   }
 }
