@@ -13,6 +13,18 @@
   align-items: center;
 }
 
+.page-header__logo {
+  transition: all 0.2s ease-in;
+
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     border-bottom: 0;

@@ -80,6 +80,7 @@
   text-transform: uppercase;
   color: @text-titles-color;
   padding-left: 1px;
+  transition: all 0.2s ease;
 
   &::after {
     content: "";
@@ -90,8 +91,21 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 13px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 34px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
+
+
 
 @media (min-width: @tablet-width) {
   .programs {

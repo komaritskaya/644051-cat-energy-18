@@ -21,6 +21,15 @@
 .main-nav__list-item > a {
   padding: 8px 0;
   border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__list-item--active > a {
@@ -30,8 +39,27 @@
 .main-nav__toggle {
   width: 25px;
   height: 19px;
-  background-color: #ff00ff;
   border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--closed {
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-size: 25px 19px;
+  }
+
+  &--opened {
+    background-image: url("../img/icon-close.svg");
+    background-size: 19px 19px;
+  }
+}
+
+.main-nav__toggle--nojs {
+  display: none;
+}
+
+.main-nav--nojs {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
