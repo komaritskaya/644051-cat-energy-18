@@ -101,7 +101,8 @@
     transition: all 0.2s ease;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-bottom: @simple-border;
     }
 
@@ -129,18 +130,19 @@
     background-color: @white-color;
     border-radius: 34px;
     position: relative;
-    box-shadow: 0px 2px 5px 0 rgba(@black-color, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
 
-    &:hover, &:focus {
-      box-shadow: 0px 3px 5px 0 rgba(@black-color, 0.25);
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active {
       border: 2px solid @content-main-color;
-      box-shadow: 0px 4px 5px 0 rgba(@black-color, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
 
-    &:after {
+    &::after {
       content: "";
       width: 8px;
       height: 8px;
