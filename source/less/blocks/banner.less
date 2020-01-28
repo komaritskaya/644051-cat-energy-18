@@ -62,6 +62,11 @@
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
+
+    &::before {
+      left: 12.8%;
+      right: auto;
+    }
   }
 
   .banner > p {
@@ -79,6 +84,11 @@
     padding-left: 40px;
     padding-right: 40px;
     min-height: 289px;
+
+    &::before {
+      left: 0;
+      right: 0;
+    }
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
