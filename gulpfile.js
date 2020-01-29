@@ -12,6 +12,7 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 
 var imagemin = require("gulp-imagemin");
+var imageminJpegtran = require("imagemin-jpegtran");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 
@@ -39,7 +40,7 @@ gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imageminJpegtran({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
@@ -90,7 +91,6 @@ gulp.task("refresh", function(done) {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**",
     "source/*.ico"
   ], {
@@ -107,6 +107,8 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "images",
+  "webp",
   "sprite",
   "html"
 ));
