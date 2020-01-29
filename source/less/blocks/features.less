@@ -109,8 +109,7 @@
     }
 
     &::after {
-      width: 200px;
-      text-align: right;
+      text-align: left;
       display: inline-block;
       position: absolute;
       font-family: @titles-font;
@@ -118,28 +117,26 @@
       line-height: 281px;
       color: @bg-light-color;
       top: -39px;
+      right: 75px;
       text-align-last: left;
       z-index: -1;
     }
 
     &:first-child::after {
       content: "1";
-      left: 120px;
+      right: 92px;
     }
 
     &:nth-child(2)::after {
       content: "2";
-      left: 112px;
     }
 
     &:nth-child(3)::after {
       content: "3";
-      left: 113px;
     }
 
     &:nth-child(4)::after {
       content: "4";
-      left: 113px;
     }
   }
 }
@@ -156,5 +153,17 @@
   .features__item {
     width: 20.1%;
     padding-right: 0;
+
+    &::after {
+      right: 0;
+    }
+
+    &:first-child::after {
+      right: 15px;
+    }
+
+    &:nth-child(4)::after {
+      right: -3px;
+    }
   }
 }
